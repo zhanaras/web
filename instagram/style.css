@@ -1,0 +1,197 @@
+body{
+    background-color: #fafafa;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+}
+.pics{
+    background-image: url(img/phones.png);
+    width: 454px;
+    height: 618px;
+    margin-left: 532px;
+    margin-top: 133px;
+}
+.fit-in{
+    margin-left: 151px;
+    position: relative;
+    top: 99px;
+}
+.slide{
+    width: 240px;
+    height: 427px;
+    background-image: url(img/1.jpg);
+    animation: fade 20s infinite;
+    position: absolute;
+}
+@keyframes fade{
+    20%{
+        background-image: url(img/2.jpg);
+    }
+    40%{
+        background-image: url(img/3.jpg);
+    }
+    60%{
+        background-image: url(img/4.jpg);
+    }
+    80%{
+        background-image: url(img/5.jpg);
+    }
+    100%{
+        background-image: url(img/1.jpg);
+    }
+}
+.main-form, .sign-in{
+    width: 350px;
+    height: 620px;
+    border: 1px solid #e6e6e6;
+    position: relative;
+    top: -709px;
+    left: 970.5px;
+    background-color: white;
+}
+.title{
+    width: 185px;
+    height: 67px;
+    margin-top: 21.5px;
+    margin-left: 80px;
+}
+.description, #or{
+    width: 268px;
+    height: 60px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 17px;
+    color: #999;
+    text-align: center;
+    margin: 0 auto;
+}
+.fb-login, .reg-button{
+    background-color: #3897f0;
+    border-radius: 5px;
+    height: 32px;
+    width: 268px;
+    color: white;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    -webkit-appearance: none;
+    border: 0px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 14px;
+}
+.fa-facebook-square{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.line, .line2{
+    border-bottom: 1px solid #dbdbdb;
+    margin-left: 40px;
+    margin-top: 25px;
+    width: 101.48px;
+}
+#or{
+    font-size: 18px;
+    line-height: 15px;
+    font-weight: 400;
+    margin-top: -8px;
+}
+.line2{
+    margin-left: 203px; 
+    margin-top: -53px;
+}
+#number, #name, #username, #password{
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    color: #999999;
+    background: #fafafa;
+    width: 258px;
+    height: 34.5px;
+    border-radius: 5px;
+    border: 1px solid #efefef; 
+    font-size: 12px;
+    padding-left: 8px;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+#name, #username, #password{
+    margin-top: 5px;
+}
+.reg-button{
+    margin-top: 15px;
+    height: 30px;
+}
+.agree{
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: #999;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 17px;
+}
+.agree a{
+    text-decoration: none;
+    color: #999;
+    font-weight: 600;
+}
+.sign-in{
+    width: 348px;
+    height: 70px;
+    margin-top: 10px;
+}
+.login-ex{
+    color: #262626;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20.5px;
+}
+.login-ex a{
+    text-decoration: none;
+    color: #3897f0;
+}
+.download{
+    margin-left: 970.5px;
+    margin-top: -708px;
+    width: 350px;
+    height: 102px;
+    text-align: center;
+}
+.offer{
+    font-size: 14px;
+}
+.available, .available-g{
+    width: 155px;
+    height: 50px;
+    float: left;
+    margin-left: 25px;
+}
+.available-g{
+    float: right;
+    margin-right: 25px;
+    margin-top: -50px;
+}
+.footer{
+    width: 1012px;
+    height: 122px;
+    margin-left: 400px;
+    padding-top: 3px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    margin-left: -3px;
+}
+li{
+    padding-right: 18px; 
+    
+}
+.options a{
+    text-decoration: none;
+    color: #003569;
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer p{
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    margin-left: 37px;
+    margin-top: -5px;
+}
