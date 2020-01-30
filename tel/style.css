@@ -1,0 +1,116 @@
+.heading{
+    background-color: #5682a3;
+    height: 226px;
+}
+body{
+    background-color:rgb(231, 235, 240);
+}
+.white-bg{
+    background-color: white;
+    width: 405px;
+    height: 337px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -57px;
+}
+div{
+    display: block;
+}
+#sign-in-wrapper{
+    position: relative;
+    top: -380px;
+    left: 770px;
+    width: 404px;
+    height: 75px;
+}
+.fa-telegram-plane{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+}
+#title{
+    position: absolute;
+    top: -20px;
+    left: 35px;
+    font-family: "Helvetica",sans-serif;
+    font-weight: lighter;
+    font-size: 15px ;
+    color: white;
+}
+#next{
+    position: absolute;
+    top: -20px;
+    left: 335px;
+    font-family: "Tahoma", sans-serif;
+    color: white;
+    font-size: 14px;
+}
+.internal-box{
+    position: absolute;
+    width: 274px;
+    height: 16px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+#sign-in{
+    position: absolute;
+    font-family: "Tahoma", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+.info{
+    position: absolute;
+    top: 40px;
+    font-family: "Helvetica", sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    color: #999;
+    line-height: 20px;
+}
+label.info{
+    top: -30px;
+}
+.country-selection{
+    position: absolute;
+    top: 150px;
+}
+#country{
+    color: #999;
+    border-top:0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.phone{
+    position: absolute;
+    top: 220px;
+}
+#phone-code{
+    width: 50px;
+    height: 24px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+#phone-number{
+    width: 199px;
+    height: 24px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.footer{
+    color: #84a2bc;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: -6px;
+    text-align: center;
+}
+.footer p{
+    font-family: "Tahoma", sans-serif;
+}
+#more{
+    top: 20px;
+    font-weight: bold;
+}
