@@ -7,6 +7,7 @@ import { categories } from './mock-categories'
 })
 export class ProductsServiceService {
 
+  productWeNeed: any;
   products = categories;
 
   constructor() { }
@@ -16,8 +17,10 @@ export class ProductsServiceService {
   }
 
   getProductById(id): Observable<any> {
+    const res = "";
     const ALL_PRODUCTS = this.products.map(category => category.products).reduce((a, b) => a.concat(b));
-    const productWeNeed = ALL_PRODUCTS.find((product: any) => product.id === id)
-    return of(productWeNeed);
+    this.productWeNeed = ALL_PRODUCTS.find((category: any) => category.id === id)
+    console.log(this.productWeNeed);
+    return of(this.productWeNeed);
   }
 }

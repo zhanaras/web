@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
 import { products } from '../products';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -8,21 +8,8 @@ import {ActivatedRoute, Router} from '@angular/router';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent{
   products = products;
-
-  constructor(private route: ActivatedRoute, private productsService: ProductsServiceService, ) { }
-
-  ngOnInit(): void {
-    this.getProduct();
-  }
-
-
-  getProduct(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.productsService.getProductById(id).subscribe(item => this.products = item)
-  }
-
 
   share() {
     window.open('https://telegram.me/share/url?url={{product.link}}&text=Смотри, что я нашла на алике!');

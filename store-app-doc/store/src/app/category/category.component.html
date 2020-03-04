@@ -1,0 +1,8 @@
+<h2>Categories</h2>
+<ul class = "categories">
+    <li *ngFor = "let category of categories; index as categoryId">
+        <a [routerLink] = "['/category', categoryId]">
+            {{ category.name }}
+        </a>
+    </li>
+</ul>

@@ -1,16 +1,3 @@
-<div *ngFor = "let category of categoriesWithProducts">
-  <h1>{{ category.name }}</h1>
-  <ul>
-    <li *ngFor = "let products of category.products">
-      <a [title] = "products.name + ' details'" [routerLink] = "['/product', products.name]">
-        {{products.name}}
-      </a>
-        <br><img src = {{products.image}}>
-        <p *ngIf = "products.description">
-          <b>Description:</b> {{ products.description }}
-          <br><b>Rating:</b> {{ products.rating }}
-          <br><a href = {{products.link}}>Direct Link</a>
-          </p> 
-    </li>
-  </ul>
+<div *ngFor = "let c of categs">
+  <p routerLink = '{{ c.id }}/products'>{{ c.name }}</p>
 </div>

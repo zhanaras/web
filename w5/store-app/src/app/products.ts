@@ -146,7 +146,7 @@ export const products = [
       id: 14,
       image: 'https://ae01.alicdn.com/kf/Hbe9ad21f28024b8a8855ccbf4c7ec04dx/monster-shrek.jpg',
       name: 'Качественные маскарадные костюмы monster shrek, реальные фотографии, мультяшные костюмы',
-      description: ' Охлаждающий вентилятор внутри головки;',
+      description: ' Охлаждающий вентилятор внутри головки',
       rating: '-',
       img1: 'https://ae01.alicdn.com/kf/Hd6c6facd14c74cba99a5b93d1d549d35p/monster-shrek.jpg',
       img2: 'https://ae01.alicdn.com/kf/He061b17afefd46aba8ea3e28f4bb9d59D/monster-shrek.jpg',

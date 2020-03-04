@@ -18,6 +18,8 @@ import { CategoryComponent } from './category/category.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductService } from './product.service';
 import { CategoriesComponent } from './categories/categories.component';
+import { CompsComponent } from './comps/comps.component';
+import { CompsDetailComponent } from './comps-detail/comps-detail.component';
 
 @NgModule({
   imports: [
@@ -30,6 +32,7 @@ import { CategoriesComponent } from './categories/categories.component';
       { path: 'categories', component: CategoriesComponent},
       { path: '', redirectTo: '/products', pathMatch: 'full'},
       { path: 'products/:productId', component: ProductDetailsComponent},
+      { path: 'categories/:id/products', component: CompsComponent },
       { path: 'category/:id', component: CategoryComponent},
       { path: 'cart', component: CartComponent }
     ])
@@ -45,7 +48,9 @@ import { CategoriesComponent } from './categories/categories.component';
     ProductItemComponent,
     CategoryComponent,
     NavBarComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CompsComponent,
+    CompsDetailComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
