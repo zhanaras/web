@@ -1,4 +1,6 @@
-export const Products = [
+import { Product } from './product';
+
+export const Products: Product[] = [
     {
         id: 11,
         name: 'pumpkin cream-soup with squid',
@@ -142,60 +144,70 @@ export const Products = [
     {
         id: 51,
         name: 'tonic thomas henry',
+        description: '',
         price: 1600,
         categoryId: 5,
     },
     {
         id: 52,
         name: 'lemonade',
+        description: '',
         price: 800,
         categoryId: 5,
     },
     {
         id: 53,
         name: 'water',
+        description: '',
         price: 600,
         categoryId: 5,
     },
     {
         id: 54,
         name: 'espresso',
+        description: '',
         price: 500,
         categoryId: 5,
     },
     {
         id: 55,
         name: 'latte',
+        description: '',
         price: 800,
         categoryId: 5,
     },
     {
         id: 61,
         name: 'el jimandor blanco',
+        description: '',
         price: 1500,
         categoryId: 6,
     },
     {
         id: 62,
         name: 'mount gay XO',
+        description: '',
         price: 3500,
         categoryId: 6,
     },
     {
         id: 63,
         name: 'titos handmade vodka',
+        description: '',
         price: 1600,
         categoryId: 6,
     },
     {
         id: 64,
         name: 'aperol',
+        description: '',
         price: 1200,
         categoryId: 6,
     },
     {
         id: 65,
         name: 'martinin rosso',
+        description: '',
         price: 1500,
         categoryId: 6,
     },
@@ -216,6 +228,7 @@ export const Products = [
     {
         id: 73,
         name: 'caramel cheesecake',
+        description: '',
         price: 2200,
         categoryId: 7,
     },
@@ -236,30 +249,35 @@ export const Products = [
     {
         id: 81,
         name: 'garlic sauce',
+        description: '',
         price: 400,
         categoryId: 8,
     },
     {
         id: 82,
         name: 'suzma',
+        description: '',
         price: 400,
         categoryId: 8,
     },
     {
         id: 83,
         name: 'garlic sauce',
+        description: '',
         price: 400,
         categoryId: 8,
     },
     {
         id: 84,
         name: 'bearn sauce',
+        description: '',
         price: 500,
         categoryId: 8,
     },
     {
         id: 85,
         name: 'ber rouge sauce',
+        description: '',
         price: 400,
         categoryId: 8,
     },

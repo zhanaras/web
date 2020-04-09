@@ -113,3 +113,16 @@ app-category-list h1{
     color: black;
     text-align: center;
 }
+app-parent .form{
+    text-align: center;
+    background-position: center center;
+}
+app-parent .inp{
+    margin: 5px;
+    border-radius: 5px;
+    padding-left: 8px;
+    -webkit-appearance: none;
+}
+app-parent h1{
+    text-align: center;
+}

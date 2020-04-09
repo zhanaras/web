@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CartComponent } from './cart/cart.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 @NgModule({
@@ -24,6 +28,9 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
     CategoryComponent,
     CategoryListComponent,
     CategoryDetailComponent,
+    ProductListComponent,
+    CartComponent,
+    ParentComponent,
   ],
   imports: [
     FormsModule,
@@ -31,6 +38,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     // RouterModule.forRoot([
     //   { path: '', component: WelcomePageComponent },
     //   { path: 'places', component: CafeListComponent },

@@ -1,6 +1,12 @@
-<!-- <h1>menu</h1>
-<div *ngFor = "let product of categories.products; index as categoryId">
-    <h1>
-        
-    </h1>
-</div> -->
+<h1>menu</h1>
+<div *ngFor = "let p of prods">
+    <h2>{{p.name}}</h2>
+    <p>{{p.description}}</p>
+    <h3>
+        {{ p.price }}
+    </h3>
+
+    <button (click) = "addToCart(p)">
+        buy
+    </button>
+</div>

@@ -1,0 +1,21 @@
+<h1>our servings</h1>
+
+<div *ngFor = "let product of products">
+    <h1>
+        <a [title]="product.name + ' details'">
+            {{ product.name }}
+        </a>
+    </h1>
+
+    <p *ngIf="product.description">
+        {{ product.description }}
+    </p>
+
+    <h2>
+        {{ product.price }}
+    </h2>
+
+    <button (click) = "addToCart(product)">
+        buy
+    </button>
+</div>
