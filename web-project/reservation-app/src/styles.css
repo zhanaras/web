@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
+/* Top Bar */
+
+/* app-top-bar {
+    width: 100%;
+    height: 68px;
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+  
+  app-top-bar a {
+    color: black;
+    margin: 0;
+    text-decoration: none;
+  } */
+
+ app-welcome-page .slide{
+    width: 95%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 8s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    background-image: url(assets/img/welcome-bg.jpg);
+    border: 15px solid white;
+    justify-content: center;
+    margin: 0 auto;
+}
+@keyframes slideBg{
+    33%{
+        background-image: url(assets/img/welcome-bg1.jpg);
+    }
+    66%{
+        background-image: url(assets/img/welcome-bg4.jpg);
+    }
+    100%{
+        background-image: url(assets/img/welcome-bg.jpg);
+    }
+}
+
+app-welcome-page .container-fluid{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+}
+
+app-category-list .list #n1{
+    background-image: url(assets/img/cat_europian.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n2{
+    background-image: url(assets/img/cat_eastern.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n1{
+    background-image: url(assets/img/cat_europian.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n3{
+    background-image: url(assets/img/cat_kazakh.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n4{
+    background-image: url(assets/img/cat_salad.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n5{
+    background-image: url(assets/img/cat_soft.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n6{
+    background-image: url(assets/img/cat_alco.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n7{
+    background-image: url(assets/img/cat_dessert.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list #n8{
+    background-image: url(assets/img/cat_sauces.jpg);
+    width: 100%;
+    height: 270px;
+}
+app-category-list .list h1{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 125px;
+    margin: 0;
+}
+app-category-list h1{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}

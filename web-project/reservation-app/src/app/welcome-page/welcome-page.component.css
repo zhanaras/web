@@ -1,0 +1,14 @@
+h1{
+    color: white;
+    font-size: 250%;
+    text-align: center;
+    line-height: 150%;
+    /* vertical-align: middle;
+    position: relative; */
+    padding-top: 25%;
+    
+}
+span{
+    font-weight: bold;
+    font-size: 400%;
+}
