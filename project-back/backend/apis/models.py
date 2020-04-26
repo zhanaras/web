@@ -35,6 +35,11 @@ class Reservation(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='reservation')
 
 
+class Order(models.Model):
+    name = models.CharField(max_length=250, blank=False, null=True)
+    phone = models.IntegerField()
+    date = models.DateTimeField()
+
 class Manager(models.Model):
     username = models.CharField(max_length=250, blank=False, null=True, unique=True)
     name = models.CharField(max_length=250, blank=False, null=True)

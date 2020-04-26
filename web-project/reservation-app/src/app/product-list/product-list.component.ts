@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Products } from '../products';
+import { Product } from '../models';
 import { CartService } from '../cart.service';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,10 +10,11 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products = Products;
+  products: Product[] = [];
 
   constructor(private route: ActivatedRoute,
-              private cartService: CartService ) { }
+              private cartService: CartService,
+              private categoryService: CategoryService ) { }
 
     addToCart(product)  {
       this.cartService.addToCart(product);
@@ -20,6 +22,10 @@ export class ProductListComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    this.getProductList();
   }
 
+  getProductList() {
+    this.categoryService.getProductList().subscribe(products => {this.products = products; });
+  }
 }

@@ -1,8 +1,8 @@
 from rest_framework import status, generics, mixins
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Category, Product, Person, Reservation
-from .serializers import CategorySerializer, ProductSerializer, PersonSerializer, ReservationSerializer
+from .models import Category, Product, Person, Reservation, Order
+from .serializers import CategorySerializer, ProductSerializer, PersonSerializer, ReservationSerializer, OrderSerializer
 from rest_framework.decorators import api_view
 
 
@@ -48,19 +48,22 @@ class ProductDetailAPIView(APIView):
         product.delete()
 
         return Response({'deleted': True})
+
+
 class CategoryProductsAPIView(APIView):
-    def get(self, request, category_id):
+    def get(self, category_id):
         products = Product.objects.filter(category_id=category_id)
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
-    def post(self, request):
+    def post(self, request,):
         serializer = ProductSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'error': serializer.errors},
                         status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 @api_view(['GET', 'POST'])
 def category_list(request):
@@ -76,6 +79,7 @@ def category_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'error': serializer.errors},
                         status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def category_detail(request, category_id):
@@ -117,7 +121,35 @@ class UsersListAPIView(mixins.ListModelMixin,
                         status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@api_view(['GET', 'POST', 'DELETE'])
+class UserDetailAPIView(APIView):
+
+    def get_object(self, id):
+        try:
+            return Person.objects.get(id=id)
+        except Person.DoesNotExist as e:
+            return Response({'error': str(e)})
+
+    def get(self, request, user_id):
+        user = self.get_object(user_id)
+        serializer = PersonSerializer(user)
+        return Response(serializer.data)
+
+    def put(self, request, user_id):
+        user = self.get_object(user_id)
+        serializer = PersonSerializer(instance=user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response({'error': serializer.errors})
+
+    def delete(self, request, user_id):
+        user = self.get_object(user_id)
+        user.delete()
+
+        return Response({'deleted': True})
+
+
+@api_view(['GET', 'POST'])
 def reservation(request):
     if request.method == 'GET':
         reservations = Reservation.objects.all()
@@ -154,3 +186,18 @@ def reservation_detail(request, res_id):
     elif request.method == 'DELETE':
         res.delete()
         return Response({'deleted': True})
+
+@api_view(['GET', 'POST'])
+def order(request):
+    if request.method == 'GET':
+        orders = Order.objects.all()
+        serializer = OrderSerializer(orders, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = OrderSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response({'error': serializer.errors},
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR)
